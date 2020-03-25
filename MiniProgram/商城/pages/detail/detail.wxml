@@ -1,0 +1,20 @@
+
+
+
+ <view class='content'>
+    <view class='item' wx:for="{{data}}" wx:key="u">
+      <view class='left'>
+        <image src='{{item.img}}'></image>
+      </view>
+      <view class='right'>
+        <view class='music'>
+          <view class='title'>
+            <text>{{item.name}}</text>
+          </view>
+          <view class='price'>
+            <text>{{item.price}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>

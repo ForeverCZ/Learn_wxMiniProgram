@@ -1,0 +1,8 @@
+{
+  "navigationBarBackgroundColor": "#4A9062",
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "笑话",
+  "enablePullDownRefresh": true,
+  "backgroundColor": "#4A9062",
+  "backgroundTextStyle": "dark"
+}

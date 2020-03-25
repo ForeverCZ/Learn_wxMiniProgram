@@ -1,0 +1,81 @@
+<view class="video">
+  <video src="{{recomentDetailsData.url}}" objectFit='fill' hidden="{{!xuanfu}}"></video>
+</view>
+<!-- 标题及简介按钮 -->
+<view class="video-list">
+  <view>{{recomentDetailsData.curriculum}}</view>
+  <view class="video-tou" bindtap="videotou">
+    <text>简介</text>
+    <image src="/image/shouqi.png" hidden="{{!hiddenName}}"></image>
+    <image src="/image/zhankai.png" hidden="{{hiddenName}}"></image>
+  </view>
+</view>
+<!-- 转发及收藏 -->
+<view class="video-forward">
+  <view>
+    <button plain size="mini" open-type="share">
+      <image src="/image/zhanfa.png"></image>
+    </button>
+  </view>
+  <view>
+    <image src="/image/shoucang.png"></image>
+  </view>
+</view>
+<!-- 简介 -->
+<view class="video-brief" hidden="{{hiddenName}}">
+  <view class=" scroll-top ">
+    <scroll-view class="scroll-view " scroll-x>
+      <block wx:for="{{images}}" wx:key="*this">
+        <view class="scroll-view-item" id="{{item.id}}">
+          <image src="{{item.image}}"></image>
+          <view>
+            <text>{{item.Fullname}}</text>
+          </view>
+        </view>
+      </block>
+    </scroll-view>
+  </view>
+  <view>
+    <!-- 电影简介 -->
+    <view class="duction ">
+      <view>
+        <text>简介</text>
+      </view>
+      <view class="duction-list ">
+        <text>{{recomentDetailsData.lecturer}}
+        </text>
+      </view>
+    </view>
+  </view>
+</view>
+<!-- 精彩留言 -->
+<view class="message">
+  <view class="message-text">精彩留言</view>
+  <view class="user-two">
+    <view class="user">
+      <view>
+        <image src="http://www.thexxdd.cn/media/goods/images/yinxiongimg.jpg"></image>
+      </view>
+      <view>
+        <text>周瑞发</text>
+      </view>
+    </view>
+    <view class="user-good">
+      <text>电影好看</text>
+    </view>
+  </view>
+</view>
+<!-- 评论引导 -->
+<view class="comment" bindtap="clickComment" hidden="{{!xuanfu}}">
+  <input placeholder-class="comment-placeholder" disabled type="text" placeholder="说说你对这部电影的看法"></input>
+</view>
+<!-- 透明背景 -->
+<view class="yinying" hidden="{{xuanfu}}" bindtap="clickComment"></view>
+<!-- 留言框 -->
+<view class="xunfu" hidden="{{xuanfu}}">
+  <form bindsubmit="bindFormSubmit">
+    <textarea fixed="true" name="textarea" show-confirm-bar="false" placeholder="输入你的好评" placeholder-class="comment-placeholder"></textarea>
+    <button hover-class="none" form-type="submit" size="mini" type="primary">发表</button>
+    <button hover-class="none" form-type="reset" size="mini" type="primary">重置</button>
+  </form>
+</view>

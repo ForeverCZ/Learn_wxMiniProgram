@@ -1,0 +1,10 @@
+<!-- 用户信息展示 -->
+<view>
+  <view wx:if="{{hasuserinfo&&canIUse}}" class="userInfo">
+    <button open-type="getUserInfo" bindgetuserinfo="login">授权登录</button>
+  </view>
+  <view class="userInfo" wx:else>
+    <image wx:if="{{userinfo.avatarUrl.length>0}}" class="userinfo-avatar" mode="widthFix" src="{{userinfo.avatarUrl}}"></image>
+    <text class="userinfo-nick">{{userinfo.nickName}}</text>
+  </view>
+</view>

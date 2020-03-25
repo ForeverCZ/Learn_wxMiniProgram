@@ -1,0 +1,26 @@
+<!-- 包裹器 -->
+<view class="r-wrap">
+  <view class="image">
+    <image src="{{topImage}}"></image>
+    <view></view>
+  </view>
+  <view class="recognitionArea">
+    <view class="share_wrap">
+      <view class="top" bindtap="startPhoto">
+        <image src="{{photo}}"></image>
+        <view>拍照/选图</view>
+      </view>
+      <button open-type="share">
+        <view class="bottom">
+          <image src="{{sharFriend}}"></image>
+          <view>分享给好友</view>
+        </view>
+      </button>
+    </view>
+  </view>
+</view>
+
+<!-- 加载组件 -->
+<view wx:if="{{loading}}" class="loading">
+  <van-loading custom-class="loadingToast" color="#9eccff" size="24px">正在识别</van-loading>
+</view>

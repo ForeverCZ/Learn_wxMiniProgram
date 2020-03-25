@@ -1,0 +1,22 @@
+<!-- loding加载效果 -->
+<view class="loding" wx:if="{{loding}}">
+  <view class="loding-text">
+    <text></text>
+    <text></text>
+    <text></text>
+    <text></text>
+    <text></text>
+  </view>
+</view>
+
+<block wx:for="{{storyDeData}}" wx:key="*this">
+  <view class="story" id="{{item.id}}" catchtap="jumpToData">
+    <view class="story-image">
+      <image mode="widthFix" src="{{item.image}}"></image>
+    </view>
+    <view class="story-list">
+      <view class="story-movie">{{item.name}}</view>
+      <view class="story-time">{{item.add_time}}</view>
+    </view>
+  </view>
+</block>

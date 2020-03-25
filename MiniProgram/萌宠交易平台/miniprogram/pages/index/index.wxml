@@ -1,0 +1,9 @@
+<view class="map-con">
+  <map class="map" bindcontroltap="controltap" id="map" controls="{{controls}}" show-compass enable-3D show-location layer-style="1" longitude="{{longitude}}" latitude="{{latitude}}" scale="14"></map>
+</view>
+<view class="buttons">
+  <view class="buttonn bt1">
+    <navigator url="../publsh/publsh">发布</navigator>
+  </view>
+  <view class="buttonn bt2">搜索</view>
+</view>

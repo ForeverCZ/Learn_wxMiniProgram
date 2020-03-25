@@ -1,0 +1,2 @@
+<button bindtap="bigein">开枪</button>
+<view class="time">{{time}}</view>

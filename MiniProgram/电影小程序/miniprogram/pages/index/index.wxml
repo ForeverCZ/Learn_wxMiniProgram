@@ -1,0 +1,50 @@
+<!-- 搜索框 -->
+<view class="search">
+  <icon type="search" color="#405f80" class="search-image" size="13"></icon>
+  <input type="text" class="searchtext" confirm-type="search" placeholder="请输入电影名字" placeholder-class="hintInfomation" bindinput="getText" bindfocus="onbindfocus"></input>
+  <icon wx:if="{{!containshow}}" bindtap="containshow" type="clear" class="iconclear search-image" color="#b1b3ae" size="13"></icon>
+</view>
+
+<!-- 搜索框以下 -->
+<view wx:if="{{containshow}}">
+  <!-- 轮播图 -->
+  <view class="content">
+    <swiper class="swiper" indicator-dots indicator-color="#ffffff" indicator-active-color="#FF9966" autoplay interval="2000" duration="2000" circular easing-function="easeInOutCubic">
+      <swiper-item wx:for="{{banners}}" wx:key="*this" id="{{item.id}}" shunxu="{{item.index}}" catchtap="jumpTBannerDetail">
+        <image mode="widthFix" src="{{item.image}}"></image>
+      </swiper-item>
+    </swiper>
+  </view>
+
+  <!-- 推荐电影 -->
+  <view class="container">
+    <view class="recomments">
+      <text class="recommend-text">推荐电影</text>
+      <view class="recomment-flex">
+        <block wx:for="{{recommens}}" wx:key="*this">
+          <view class="recomment-two" id="{{item.id}}" catchtap="jumpTRommentDetail">
+            <image src="{{item.image}}" mode="widthFix"></image>
+            <text class="recomment-large">{{item.curriculum}}</text>
+            <text class="recomment-small">{{item.lecturer}}</text>
+          </view>
+        </block>
+      </view>
+    </view>
+  </view>
+
+  <!-- 香港电影 -->
+  <view class="container">
+    <view class="recomments">
+      <text class="recommend-text">香港电影</text>
+      <view class="recomment-flex">
+        <block wx:for="{{hongKongs}}" wx:key="*this">
+          <view class="recomment-two" id="{{item.name.id}}" catchtap="jumpTHongKongDetail">
+            <image src="{{item.name.image}}" mode="widthFix"></image>
+            <text class="recomment-large">{{item.name.curriculum}}</text>
+            <text class="recomment-small">{{item.name.lecturer}}</text>
+          </view>
+        </block>
+      </view>
+    </view>
+  </view>
+</view>

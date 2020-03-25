@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "视屏详情",
+  "usingComponents": {
+    "Mytitle": "../../compontet/Mytitle/Mytitle"
+  }
+}

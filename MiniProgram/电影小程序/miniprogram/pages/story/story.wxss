@@ -1,0 +1,50 @@
+.loding {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: white;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loding-text text {
+  display: inline-block;
+  width: 10rpx;
+  margin: 0 8rpx;
+  border-radius: 6rpx;
+  background: limegreen;
+  animation: loding-text1 1s ease infinite;
+}
+
+.loding-text text:nth-child(2) {
+  animation-delay: 200ms;
+}
+
+.loding-text text:nth-child(3) {
+  animation-delay: 400ms;
+}
+
+.loding-text text:nth-child(4) {
+  animation-delay: 600ms;
+}
+
+.loding-text text:nth-child(5) {
+  animation-delay: 800ms;
+}
+
+/* 动画效果 */
+
+@keyframes loding-text1 {
+  0%, 100% {
+    height: 20rpx;
+  }
+
+  50% {
+    height: 40rpx;
+    margin-bottom: -10rpx;
+  }
+}

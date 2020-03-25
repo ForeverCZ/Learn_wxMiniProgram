@@ -1,0 +1,19 @@
+<!-- <scroll-view scroll-y style="height:800rpx;" bindscrolltoupper="uper" bindscrolltolower="lower"> -->
+<view bindtap="jump" id="{{index}}" class="ul" hidden="{{!flag}}" wx:for="{{data}}" wx:key="{{u}}">
+  <view class="li">
+    <view class="left {{color[index]}}">{{index+1}}</view>
+    <view class="center">{{item.title}}</view>
+    <view class="right">
+      <image src="../../img/arrow1.png"></image>
+    </view>
+  </view>
+</view>
+
+<!-- 底部正在加载提示 -->
+<view class="loding" hidden="{{!lodingMore}}">
+  正在加载更多..
+</view>
+
+<!-- 底部已加载完成提示 -->
+<view class="loding" hidden="{{!lodingOverAll}}">已加载完成</view>
+<!-- </scroll-view> -->

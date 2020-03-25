@@ -1,0 +1,71 @@
+<!-- 公共头部 -->
+<view class="main">
+  <Mytitle></Mytitle>
+  <!-- 视屏详情 -->
+  <view class="videp_info">
+    <!-- 视屏标签 -->
+    <video src="{{videoInfo.videoSrc}}" controls></video>
+    <!-- 视屏标题 -->
+    <view class="video_title">
+      <text>{{videoInfo.videoTitle}}</text>
+      <text class="iconfont icon-index-jiantou"></text>
+    </view>
+    <!-- 视频作者 -->
+    <view class="video_detail">
+      <!-- 作者 -->
+      <text class="author">{{videoInfo.author}}</text>
+      <!--播放量 -->
+      <text class="author">{{videoInfo.playCount}}</text>
+      <!-- 评论量 -->
+      <text class="author">{{videoInfo.commentCount}}弹幕</text>
+      <!-- 时间 -->
+      <text class="author">{{videoInfo.date}}</text>
+    </view>
+  </view>
+  <!-- 推荐视屏 -->
+  <view class="otherList">
+    <navigator wx:for="{{otherList}}" class="item_oher">
+      <!-- 图片 -->
+      <view class="other_img_wrap">
+        <image src="{{item.imgSrc}}" mode="widthFix"></image>
+      </view>
+      <!-- 视屏详情 -->
+      <view class="other_info">
+        <!-- 标题 -->
+        <view class="other_title">{{item.title}}</view>
+        <!-- 播放量 -->
+        <view class="other_detail">
+          <!-- 播放量 -->
+          <text class="play_count">{{item.playMsg}}</text>
+          <!-- 评论量 -->
+          <text class="play_count">{{item.commentCount}}</text>
+        </view>
+      </view>
+    </navigator>
+  </view>
+  <!-- 评论 -->
+  <view class="comment_wrap">
+    <view class="commmnet_title">
+      评论{{commenData.commentTotalCount}}
+    </view>
+    <view class="commnet_list">
+      <view class="commnet_item" wx:for="{{commenData.commentList}}">
+        <!-- 左侧 -->
+        <view class="commnet_user">
+          <image mode="widthFix" src="{{item.userIconSrc}}"></image>
+        </view>
+        <!-- 右侧 -->
+        <view class="commnet_info">
+          <view class="commnet_detail">
+            <text class="author">{{item.username}}</text>
+            <text class="date">{{item.commentDate}}</text>
+          </view>
+          <view class="commnet_content">
+            {{item.commentInfo}}
+          </view>
+        </view>
+      </view>
+    </view>
+
+  </view>
+</view>

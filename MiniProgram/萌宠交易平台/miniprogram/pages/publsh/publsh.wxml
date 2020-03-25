@@ -1,0 +1,28 @@
+<view>
+  <view class="row">
+    <label class="title">我的地址</label>
+    <view class="content" bindtap="handAdressClick">点击选择，要勾选啊~</view>
+  </view>
+  <view class="row">
+    <label class="title">类型</label>
+    <view class="content">
+      <radio-group class="radio-group" bindchange="radioChange">
+        <radio id="1" value="1" checked="true">求购</radio>
+        <radio id="2" value="2">转让</radio>
+      </radio-group>
+    </view>
+  </view>
+  <view class="row">
+    <label class="title">说明</label>
+    <view class="content">
+      <input class="text" confirm-type="done" placeholder-class="inputStle" placeholder="填写你的具体需求" type="text"></input>
+    </view>
+  </view>
+  <view class="row">
+    <label class="title">联系方式</label>
+    <view class="content">
+      <input class="text" confirm-type="done" placeholder-class="inputStle" placeholder="填写你的联系方式" type="text"></input>
+    </view>
+  </view>
+</view>
+<view class="btnPublish">发布信息</view>

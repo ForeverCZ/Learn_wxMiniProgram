@@ -1,0 +1,57 @@
+page {
+  background: #eee;
+}
+
+.details {
+  background: url(https://dss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2561161346,2317081043&fm=26&gp=0.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+.resource-image {
+  width: 95%;
+  padding-left: 5rpx;
+  padding-right: 20rpx;
+  padding-top: 25rpx;
+}
+
+.resource {
+  display: flex;
+  justify-content: space-between;
+  padding: 40rpx 0;
+}
+
+.resource-image image {
+  width: 95%;
+  display: block;
+  border-radius: 15rpx;
+}
+
+.resource-text {
+  width: 100%;
+  padding-right: 10rpx;
+}
+
+.resource-text text {
+  font-size: 32rpx;
+}
+
+.resource-text view {
+  line-height: 1.9;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+#textc {
+  color: white;
+  font-size: 39rpx;
+}
+
+.texta {
+  color: white;
+}
+
+.textb {
+  color: coral;
+}

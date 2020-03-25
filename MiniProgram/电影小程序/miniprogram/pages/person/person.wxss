@@ -1,0 +1,53 @@
+.userInfo {
+  display: flex;
+  height: 250rpx;
+  flex-direction: column;
+  align-items: center;
+  background: #477bc7;
+  padding: 30rpx 0;
+  animation: animitionShow 2s;
+  justify-content: center;
+}
+
+.userinfo-avatar {
+  width: 100rpx;
+  border-radius: 50%;
+  margin: 10rpx 0;
+  animation: rotation 2s linear infinite;
+}
+
+.userInfo button {
+  color: white;
+  background: #f5da81;
+  height: 85rpx;
+  line-height: 85rpx;
+  font-size: 30rpx;
+  width: 300rpx;
+}
+
+.userinfo-nick {
+  color: white;
+  font-size: 30rpx;
+}
+
+@keyframes animitionShow {
+  from {
+    opacity: 0.5;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+    filter:hue-rotate(0deg) drop-shadow(4px 4px 10px red);
+  }
+
+  to {
+    transform: rotate(360deg);
+    filter:hue-rotate(180deg) drop-shadow(4px 4px 10px rgb(24, 233, 94));
+  }
+}

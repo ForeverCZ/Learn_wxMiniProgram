@@ -1,0 +1,131 @@
+@import "../../style/jiantou.wxss";
+.main {
+    padding: 10rpx;
+    color: #666;
+}
+
+.videp_info {
+    margin-top: 10rpx;
+}
+
+.videp_info video {
+    width: 100%;
+    color: #000;
+}
+
+.video_title {
+    display: flex;
+    justify-content: space-between;
+    font-size: 25rpx;
+}
+
+.video_detail {
+    margin-top: 5rpx;
+    font-size: 28rpx;
+}
+
+.video_detail .author {
+    color: #000;
+    margin-right: 10rpx;
+}
+
+
+/* 推荐视屏 */
+
+.otherList {
+    margin-top: 10rpx;
+}
+
+.item_oher {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10rpx;
+}
+
+.other_img_wrap {
+    width: 38%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.other_img_wrap image {
+    width: 90%;
+    border-radius: 15rpx;
+}
+
+.other_info {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.other_title {
+    font-size: 30rpx;
+    color: #e06f93;
+}
+
+.other_detail {
+    font-size: 30rpx;
+    color: #666;
+}
+
+
+/* 评论列表 */
+
+.comment_wrap {
+    margin-top: 10rpx;
+}
+
+.commmnet_title {
+    padding: 10rpx;
+    font-size: 28rpx;
+}
+
+.commnet_item {
+    margin-bottom: 10rpx;
+    padding: 10rpx;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #666;
+}
+
+.commnet_user {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.commnet_user image {
+    width: 60%;
+    border-radius: 14rpx;
+}
+
+.commnet_info {
+  flex: 5;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.commnet_detail {
+    display: flex;
+    justify-content: space-between;
+}
+
+.commnet_detail .author {
+    font-size: 28rpx;
+    color: #000;
+}
+
+.commnet_detail .date {
+    color: #666;
+    font-size: 24rpx;
+}
+
+.commnet_content {
+    font-size: 28rpx;
+    color: #000;
+}

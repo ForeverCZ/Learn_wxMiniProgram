@@ -1,0 +1,39 @@
+page{
+  background: rgb(236, 229, 229);
+}
+.row {
+  line-height: 100rpx;
+  border-bottom: 1px solid #ccc;
+  background: rgb(245, 236, 236);
+}
+
+.btnPublish {
+  width: 80%;
+  border-radius: 5px;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  background: orange;
+  margin: 20rpx auto 0 auto;
+}
+.row{
+  display: flex;
+  color: rgb(121, 118, 118);
+  align-items: center;
+}
+.title{
+  flex: 1;
+  text-indent: 1rem;
+}
+.content{
+  flex: 2;
+}
+.inputStle{
+  color: rgb(204, 197, 197);
+}
+.text{
+  border: 1px solid rgb(236, 195, 195);
+  width: 70%;
+  border-radius: 35px;
+  padding: 8rpx 20rpx;
+}
