@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/collection/collection",
     "pages/details/details-list/details-list",
     "pages/classc/hong/hong",
     "pages/banner/banner-page/banner-page",

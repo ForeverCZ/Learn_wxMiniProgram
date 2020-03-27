@@ -17,8 +17,11 @@
       <image src="/image/zhanfa.png"></image>
     </button>
   </view>
-  <view>
-    <image src="/image/shoucang.png"></image>
+  <view wx:if="{{No}}">
+    <image src="/image/shoucang.png" catchtap="collectioncont"></image>
+  </view>
+  <view wx:else>
+    <image src="/image/yishoucang.png" catchtap="cancelcollectioncont"></image>
   </view>
 </view>
 <!-- 简介 -->

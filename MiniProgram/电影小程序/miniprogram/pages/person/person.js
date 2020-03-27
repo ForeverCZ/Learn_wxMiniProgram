@@ -92,7 +92,12 @@ Page({
       })
     }
   },
-
+// 我的收藏
+  toClection(){
+    wx.navigateTo({
+      url: '/pages/collection/collection',
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

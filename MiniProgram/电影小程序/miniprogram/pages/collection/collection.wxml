@@ -1,0 +1,12 @@
+<block wx:for="{{collect}}" wx:key="*this">
+  <navigator url="../video/recomend/recomend?id={{item.goods.name.id}}">
+    <view class="story" id="{{item.goods.name.id}}">
+      <view class="story-image">
+        <image mode="widthFix" src="{{item.goods.name.image}}"></image>
+      </view>
+      <view class="story-list">
+        <view class="story-movie">{{item.goods.name.curriculum}}</view>
+      </view>
+    </view>
+  </navigator>
+</block>

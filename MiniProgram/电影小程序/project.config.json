@@ -57,8 +57,8 @@
 				},
 				{
 					"id": 1,
-					"name": "pages/person/person",
-					"pathName": "pages/person/person",
+					"name": "pages/video/recomend/recomend",
+					"pathName": "pages/video/recomend/recomend",
 					"query": "",
 					"scene": null
 				},
@@ -66,6 +66,13 @@
 					"id": -1,
 					"name": "pages/index/index",
 					"pathName": "pages/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/person/person",
+					"pathName": "pages/person/person",
 					"query": "",
 					"scene": null
 				}
