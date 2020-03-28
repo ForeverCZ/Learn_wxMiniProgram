@@ -13,9 +13,9 @@
       <image mode="widthFix" src="/image/shoucang.png"></image>
       <text>我的收藏</text>
     </view>
-    <view>
+    <view catchtap="toFeedback">
       <image mode="widthFix" src="/image/yijian.png"></image>
-      <text>我的反馈</text>
+      <text>我的留言</text>
     </view>
   </view>
 </view>

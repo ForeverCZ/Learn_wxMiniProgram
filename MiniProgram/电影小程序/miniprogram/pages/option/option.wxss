@@ -1,1 +1,78 @@
-/* pages/option/option.wxss */
+page {
+  background: #333;
+}
+
+.white {
+  box-shadow: inset 2rpx 2rpx 5rpx white;
+}
+
+.textarea {
+  background: #fff;
+  width: 100%;
+  font-size: 30rpx;
+  padding-top: 5rpx;
+}
+
+.option button {
+  float: right;
+  margin-top: 8rpx;
+  margin-left: 8rpx;
+}
+
+/* 清除浮动带来的影响 */
+
+.option button::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.option button:nth-of-type(1) {
+  background: #a9f5a9;
+}
+
+.option button:nth-of-type(2) {
+  background: #f5da81;
+}
+
+/* 留言区 */
+
+.head-root {
+  display: flex;
+  align-items: center;
+}
+
+.head-root image {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+}
+
+.option-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.option-message {
+  margin-top: 120rpx;
+  color: #fff;
+}
+
+.portrait {
+  padding-left: 80rpx;
+  font-size: 34rpx;
+}
+
+.forList {
+  border-bottom: 1px solid white;
+  margin-bottom: 30rpx;
+  padding: 2rpx 3rpx 20rpx 3rpx;
+}
+
+.forList:last-child {
+  margin-bottom: 5rpx;
+}
+
+.time {
+  font-size: 32rpx;
+}

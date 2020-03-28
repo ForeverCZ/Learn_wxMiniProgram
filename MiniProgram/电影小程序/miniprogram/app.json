@@ -1,12 +1,12 @@
 {
   "pages": [
+    "pages/option/option",
     "pages/collection/collection",
     "pages/details/details-list/details-list",
     "pages/classc/hong/hong",
     "pages/banner/banner-page/banner-page",
     "pages/video/recomend/recomend",
     "pages/index/index",
-    "pages/option/option",
     "pages/person/person",
     "pages/story/story"
   ],

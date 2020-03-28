@@ -1,2 +1,29 @@
-<!--pages/option/option.wxml-->
-<text>pages/option/option.wxml</text>
+<view class="option">
+  <form bindsubmit="submit" bindreset="reset">
+    <textarea show-confirm-bar="false" name="textarea" class="textarea" maxlength="-1" placeholder="我们是不完美的，需要您的建议"></textarea>
+    <button form-type="submit" hover-class="white" size="mini">发表</button>
+    <button form-type="reset" hover-class="white" size="mini">重置</button>
+  </form>
+</view>
+
+<!-- 留言市显示区 -->
+<view class="option-message">
+  <view class="forList" wx:for="{{messages}}" wx:key="*this">
+    <view class="option-list">
+      <view class="head-root">
+        <view>
+          <image src="{{userInfo.avatarUrl}}"></image>
+        </view>
+        <view>
+          <text>{{userInfo.nickName}}</text>
+        </view>
+      </view>
+      <view class="time">
+        <text>{{item.add_time}}</text>
+      </view>
+    </view>
+    <view class="portrait">
+      <text>{{item.message}}</text>
+    </view>
+  </view>
+</view>

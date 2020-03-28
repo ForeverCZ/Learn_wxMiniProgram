@@ -85,17 +85,23 @@ Page({
           console.log("获取用户信息失败")
         }
       })
-    }else{
+    } else {
       console.log("没有登录态")
       that.setData({
-        hasuserinfo:true
+        hasuserinfo: true
       })
     }
   },
-// 我的收藏
-  toClection(){
+  // 我的收藏
+  toClection() {
     wx.navigateTo({
       url: '/pages/collection/collection',
+    })
+  },
+  // 我的留言
+  toFeedback() {
+    wx.navigateTo({
+      url: '/pages/option/option',
     })
   },
   /**
