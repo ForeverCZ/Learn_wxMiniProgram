@@ -1,6 +1,7 @@
 <view class='amountBg'>
   <view class='img'>
     <open-data type="userAvatarUrl"></open-data>
+    <view class="animition"></view>
   </view>
   <view class='account'>
     <view class='nick-name'>
@@ -38,7 +39,7 @@
       <view>邀请好友</view>
     </view>
     <view class='rightShare' bindtap='clickInvitivation'>
-      <button open-type="share" hover-class="none" class='opr'>一起来玩~</button>></view>
+      <button open-type="share" hover-class="none" class='opr'>一起使用~</button>></view>
   </view>
   <view class='hr'></view>
 
