@@ -1,0 +1,137 @@
+page {
+  background: #f5f5f0;
+}
+
+.amountBg {
+  display: flex;
+  flex-direction: row;
+  height: 100px;
+  background-color: #ff1919;
+  align-items: center;
+}
+
+.img {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  margin-left: 20px;
+  width: 49px;
+  height: 49px;
+  border-radius: 50%;
+}
+
+.img view {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 49px;
+  height: 49px;
+  border-radius: 50%;
+}
+
+.animition {
+  background: linear-gradient(45deg, rgba(0, 0, 0, 0.1) 45%, rgba(250, 250, 209, 0.5) 60%, rgba(0, 0, 0, 0.1) 75%);
+  background-size: 250%;
+  animation: toslide 2s ease-in-out infinite;
+}
+
+@keyframes toslide {
+  from {
+    background-position: 100%;
+  }
+
+  to {
+    background-position: 0%;
+  }
+}
+
+.account {
+  width: 70%;
+  color: #fff;
+  margin-left: 10px;
+  align-items: center;
+}
+
+.nick-name {
+  font-family: 'Mcrosoft Yahei';
+  font-size: 16px;
+}
+
+.address {
+  font-size: 13px;
+}
+
+.item {
+  display: flex;
+  flex-direction: row;
+  background-color: #fff;
+  height: 50px;
+  align-items: center;
+}
+
+.icon {
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon image {
+  width: 44rpx;
+  height: 42rpx;
+}
+
+.itemName {
+  text-align: left;
+  width: 40%;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.line {
+  height: 10px;
+}
+
+.hr {
+  height: 1px;
+  opacity: 0.2;
+}
+
+.right {
+  width: 40%;
+  text-align: right;
+}
+
+.opr {
+  color: #5495e6;
+  font-size: 13px;
+  font-weight: bold;
+  margin-right: 10px;
+  display: inline-block;
+}
+
+.rightShare {
+  width: 40%;
+  text-align: right;
+  display: flex;
+  align-items: center;
+}
+
+button::after {
+  border: none;
+}
+
+button {
+  background: transparent;
+}
+
+/* 客服 */
+
+.customerService {
+  width: 100%;
+  outline: none;
+  border: none;
+  padding: 0;
+}

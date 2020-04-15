@@ -1,0 +1,344 @@
+page {
+  background: #f5f5f0;
+}
+
+.header {
+  border-bottom-left-radius: 30rpx;
+  border-bottom-right-radius: 30rpx;
+  background: #ff1919;
+}
+
+.broad {
+  display: flex;
+  align-items: center;
+}
+
+.broad swiper {
+  width: 690rpx;
+  height: 70rpx;
+}
+
+.broad swiper swiper-item {
+  display: flex;
+  align-items: center;
+  font-size: 35rpx;
+  color: cornsilk;
+  padding-left: 10rpx;
+}
+
+.broad image {
+  width: 46rpx;
+  height: 46rpx;
+}
+
+.banner {
+  padding-top: 10rpx;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 70rpx;
+}
+
+.banner swiper {
+  width: 95%;
+  height: 400rpx;
+  border-radius: 20rpx;
+  /* swiper圆角 */
+  transform: translateY(0);
+  overflow: hidden;
+}
+
+.banner swiper image {
+  width: 100%;
+  height: 400rpx;
+}
+
+/* 联系我 */
+
+.contact {
+  border-radius: 10rpx;
+  width: 95%;
+  margin: 0 auto;
+  background: #fff;
+  position: relative;
+  top: -50rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 30rpx 0;
+  box-shadow: 8rpx 8rpx 5rpx rgb(185, 185, 185);
+}
+
+.contact view, .contact .shareBtn {
+  width: 26%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  font-size: 30rpx;
+}
+
+.contact .shareBtn {
+  width: 100%;
+  outline: none;
+  background: transparent;
+  border: none;
+  line-height: 1.5;
+}
+
+.contact image {
+  width: 100rpx;
+  height: 85rpx;
+  margin-bottom: 10rpx;
+}
+
+.contact .shareBtn::after {
+  border: none;
+}
+
+/* 遮罩层 */
+
+.mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.picture {
+  height: 60vh;
+  width: 80%;
+  position: absolute;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+}
+
+.picture image {
+  width: 100%;
+  height: 100%;
+  border-radius: 20rpx;
+}
+
+.toUuth {
+  font-size: 35rpx;
+  width: 250rpx;
+  color: white;
+  background: #90f32d;
+  border-radius: 20rpx;
+}
+
+/* 遮罩层隐藏动画 */
+
+.fadeout {
+  animation: fade 2s linear;
+}
+
+@keyframes fade {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+/* 按钮按下去时 */
+
+.hoverSetin {
+  box-shadow: 7rpx 7rpx 5rpx rgb(48, 126, 17);
+}
+
+/* 啤酒展示区 */
+
+/* 图标 */
+
+.color {
+  color: rgb(247, 46, 11) !important;
+  font-size: 50rpx;
+}
+
+.agent {
+  display: flex;
+  align-items: center;
+  position: relative;
+  top: -45rpx;
+}
+
+.agent_text {
+  font-size: 30rpx;
+  color: rgb(48, 126, 17);
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+}
+
+.tip {
+  width: 95%;
+  margin: 0 auto;
+  padding: 30rpx 0 10rpx 0;
+}
+
+.title_text {
+  font-weight: bold;
+  font-size: 34rpx;
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.title view text:nth-child(1) {
+  color: #ff1919;
+  font-size: 26rpx;
+  font-weight: bold;
+}
+
+.title view text:nth-child(2) {
+  font-size: 25rpx;
+  color: rgb(70, 69, 69);
+}
+
+/* 图片列表区 */
+
+.exhibit_wrap {
+  padding-bottom: 25rpx;
+  border-bottom: 3rpx solid gray;
+}
+
+.exhibit {
+  width: 95%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.exhibit_image {
+  width: 55%;
+  border-radius: 10rpx;
+}
+
+.exhibit_image image {
+  width: 100%;
+  height: 350rpx;
+}
+
+.exhibit_context {
+  width: 40%;
+  height: 350rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.bottom view {
+  color: #ff1919;
+  display: inline-block;
+  border-radius: 30rpx;
+  border: 2rpx solid rgb(163, 184, 163);
+  padding: 5rpx 12rpx;
+  font-size: 28rpx;
+  font-weight: bold;
+}
+
+.specialOffer {
+  font-size: 29rpx;
+  display: inline-block;
+  color: white;
+  padding: 2rpx 10rpx;
+  background: #ff1919;
+}
+
+.oldPrice {
+  margin-top: 10rpx;
+  font-size: 35rpx;
+}
+
+.oldPrice text {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 30rpx;
+}
+
+.introduction {
+  padding: 8rpx 0;
+  font-size: 35rpx;
+}
+
+.introduction text {
+  font-size: 30rpx;
+}
+
+/* 添加到我的小程序 */
+
+.addMyPro {
+  position: fixed;
+  top: 30rpx;
+  left: 0;
+  right: 0;
+}
+
+.addMyPro_top {
+  margin-left: 555rpx;
+  width: 0;
+  height: 0;
+  border-left: 30rpx solid transparent;
+  border-right: 30rpx solid transparent;
+  border-bottom: 35rpx solid rgba(0, 0, 0, 0.5);
+}
+
+.addMyPro_bottom {
+  display: flex;
+  align-items: center;
+  font-size: 30rpx;
+}
+
+.dot1 {
+  width: 10rpx;
+  height: 10rpx;
+  border-radius: 50%;
+  background: lightcyan;
+}
+
+.dot2 {
+  width: 15rpx;
+  height: 15rpx;
+  border-radius: 50%;
+  background: lightcyan;
+}
+
+.dot3 {
+  width: 10rpx;
+  height: 10rpx;
+  border-radius: 50%;
+  background: lightcyan;
+}
+
+.pad {
+  margin: 0 5rpx;
+}
+
+.addMyPro_bottom_text {
+  color: lightcyan;
+}
+
+.separate {
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  font-size: 30rpx;
+  width: 75%;
+  padding: 12rpx 10rpx;
+  margin-left: 140rpx;
+  justify-content: space-between;
+  border-top-left-radius: 40rpx;
+  border-bottom-right-radius: 40rpx;
+}

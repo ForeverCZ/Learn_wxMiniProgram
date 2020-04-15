@@ -1,0 +1,112 @@
+<view class="wrap-home">
+  <view class="header">
+
+    <!-- 广播 -->
+    <view class="broad">
+      <image src="../../image/laba.png"></image>
+      <swiper autoplay interval="2500" duration="150" circular vertical>
+        <block wx:for="{{broadData}}" wx:key="*this">
+          <swiper-item catchtouchmove="stopTouchMove">
+            <text>{{item.text}}</text>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+
+
+    <!-- 轮播图 -->
+    <view class="banner">
+      <swiper indicator-dots autoplay interval="2500" duration="150" circular indicator-active-color="rgb(255, 0, 0)" indicator-color="rgb(255, 255, 255)">
+        <block wx:for="{{bannerData}}" wx:key="*this">
+          <swiper-item catchtap="previewBanner" data-index="{{index}}">
+            <image src="{{item.image}}"></image>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+  </view>
+
+
+  <!-- 联系信息 -->
+  <view class="contact">
+
+    <view catchtap="wx">
+      <image src="../../image/wx.png"></image>
+      <text>加我微信</text>
+    </view>
+    <view catchtap="phone">
+      <image src="../../image/phone.png"></image>
+      <text>电话热线</text>
+    </view>
+    <view catchtap="share">
+      <button open-type="share" class="shareBtn">
+        <image src="../../image/share.png"></image>
+        <text>邀请好友</text>
+      </button>
+    </view>
+  </view>
+  <!-- 说明区域 -->
+  <view class="tip">
+    <!-- <view class="agent">
+      <text class="iconfont icon-index-comment color"></text>
+      <text class="agent_text">代理火爆招聘中，如有意请拨打上方热线!</text>
+    </view> -->
+    <view class="title">
+      <text class="title_text">啤酒展示区-便宜又好喝</text>
+      <view>
+        <text>Tip:</text>
+        <text class="tip_text">展示图片点击可以预览多张哦~</text>
+      </view>
+    </view>
+  </view>
+  <!-- 图片列表区 -->
+  <view class="exhibit_wrap" wx:for="{{listData}}" wx:key="*this">
+    <view class="exhibit">
+      <view class="exhibit_image">
+        <image catchtap="showAll" data-index="{{index}}" src="{{item.images[0]}}"></image>
+      </view>
+      <view class="exhibit_context">
+        <view class="top">
+          <view class="specialOffer">
+            <text>{{item.discount}}</text>
+          </view>
+          <view class="oldPrice">价格:
+            <text>{{item.price}}</text>
+          </view>
+          <view class="introduction">简介:
+            <text>{{item.introduction}}</text>
+          </view>
+        </view>
+        <view class="bottom">
+          <view>
+            {{item.title}}
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+</view>
+<!-- 微信二维码遮罩层 -->
+<view hidden="{{!ismask}}" class="mask" catchtap="cancelMask">
+</view>
+<view hidden="{{!ismask}}" class="picture {{isfade? 'fadeout':''}}">
+  <image hidden="{{!isauthor}}" catchlongtap="savePicture" src="../../image/wxcode.jpg"></image>
+  <button hover-class="hoverSetin" hidden="{{isauthor}}" catchtap="openSeting" class="toUuth">点我授权</button>
+</view>
+
+<!-- 添加到我的小程序 -->
+<view class="addMyPro" hidden="{{isAdd}}">
+  <view class="addMyPro_top">
+  </view>
+  <view class="separate">
+    <view class="addMyPro_bottom">
+      <view class="addMyPro_bottom_text">点击上方</view>
+      <view class="dot1 pad"></view>
+      <view class="dot2 pad"></view>
+      <view class="dot3 pad"></view>
+      <view class="addMyPro_bottom_text">添加到我的小程序</view>
+    </view>
+    <icon bindtap="cancelAddPro" type="cancel" size="22" color="lightcyan" />
+  </view>
+</view>
