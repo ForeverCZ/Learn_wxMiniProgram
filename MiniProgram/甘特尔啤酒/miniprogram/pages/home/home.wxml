@@ -28,15 +28,14 @@
 
 
   <!-- 联系信息 -->
-  <view class="contact">
-
+  <view class="contact" hidden="{{importantShow}}">
+    <view catchtap="phone">
+      <image src="../../image/phone.png"></image>
+      <text>联系电话</text>
+    </view>
     <view catchtap="wx">
       <image src="../../image/wx.png"></image>
       <text>加我微信</text>
-    </view>
-    <view catchtap="phone">
-      <image src="../../image/phone.png"></image>
-      <text>电话热线</text>
     </view>
     <view catchtap="share">
       <button open-type="share" class="shareBtn">
@@ -47,12 +46,12 @@
   </view>
   <!-- 说明区域 -->
   <view class="tip">
-    <!-- <view class="agent">
+    <view class="agent" hidden="{{true}}">
       <text class="iconfont icon-index-comment color"></text>
-      <text class="agent_text">代理火爆招聘中，如有意请拨打上方热线!</text>
-    </view> -->
+      <text class="agent_text">代理招聘中，如有意请联系我们!</text>
+    </view>
     <view class="title">
-      <text class="title_text">啤酒展示区-便宜又好喝</text>
+      <text class="title_text">啤酒展示区(便宜又好喝)</text>
       <view>
         <text>Tip:</text>
         <text class="tip_text">展示图片点击可以预览多张哦~</text>

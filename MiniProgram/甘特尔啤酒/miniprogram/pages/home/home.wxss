@@ -40,7 +40,7 @@ page {
 
 .banner swiper {
   width: 95%;
-  height: 400rpx;
+  height: 465rpx;
   border-radius: 20rpx;
   /* swiper圆角 */
   transform: translateY(0);
@@ -49,7 +49,8 @@ page {
 
 .banner swiper image {
   width: 100%;
-  height: 400rpx;
+  height: 465rpx;
+  /* height: 400rpx; */
 }
 
 /* 联系我 */
@@ -65,7 +66,7 @@ page {
   align-items: center;
   justify-content: space-around;
   padding: 30rpx 0;
-  box-shadow: 8rpx 8rpx 5rpx rgb(185, 185, 185);
+  box-shadow: 6rpx 6rpx 6rpx rgb(185, 185, 185);
 }
 
 .contact view, .contact .shareBtn {
@@ -108,9 +109,9 @@ page {
 }
 
 .picture {
-  height: 60vh;
+  height: 55vh;
   width: 80%;
-  position: absolute;
+  position:fixed;
   z-index: 999;
   display: flex;
   align-items: center;
@@ -191,8 +192,6 @@ page {
 .title_text {
   font-weight: bold;
   font-size: 34rpx;
-  display: inline-block;
-  margin: 0 auto;
 }
 
 .title view text:nth-child(1) {

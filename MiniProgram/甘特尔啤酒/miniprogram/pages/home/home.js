@@ -16,7 +16,9 @@ Page({
     // 授权按钮
     isauthor: true,
     // 添加到我的小程序
-    isAdd: false
+    isAdd: false,
+    isAddFlag: false,
+    importantShow: true
   },
   // 预览banner
   previewBanner(event) {
@@ -73,7 +75,7 @@ Page({
     db.collection('banner').get().then(res => {
       console.log("banner数据", res.data)
       that.setData({
-        bannerData: res.data
+        bannerData: res.data.reverse()
       })
     })
   },
@@ -82,7 +84,7 @@ Page({
     db.collection('list').get().then(res => {
       console.log("商品列表", res.data)
       that.setData({
-        listData: res.data
+        listData: res.data.reverse()
       })
     })
   },
@@ -170,7 +172,17 @@ Page({
   // 取消添加到我的小程序
   cancelAddPro() {
     that.setData({
-      isAdd: true
+      isAdd: true,
+      isAddFlag: true
+    })
+  },
+  // 是否显示
+  isimportantShow() {
+    db.collection('importantShow').get().then(res => {
+      console.log("重要是否显示", res.data[0].hidden)
+      that.setData({
+        importantShow: res.data[0].hidden
+      })
     })
   },
   /**
@@ -181,6 +193,7 @@ Page({
     that.banner();
     that.listMerchandise();
     that.broad();
+    that.isimportantShow();
   },
 
   /**
@@ -220,17 +233,22 @@ Page({
 
   // 滚动事件
   onPageScroll: function(event) {
-    // console.log(event.scrollTop)
-    let scrollTop = event.scrollTop
-    if (scrollTop > 150) {
-      that.setData({
-        isAdd: true
-      })
+    if (that.data.isAddFlag) {
+      return
     } else {
-      that.setData({
-        isAdd: false
-      })
+      // console.log(event.scrollTop)
+      let scrollTop = event.scrollTop
+      if (scrollTop > 150) {
+        that.setData({
+          isAdd: true
+        })
+      } else {
+        that.setData({
+          isAdd: false
+        })
+      }
     }
+
   },
   /**
    * 页面上拉触底事件的处理函数
@@ -244,7 +262,7 @@ Page({
    */
   onShareAppMessage: function() {
     return {
-      title: '甘特尔啤酒厂家直销，火爆招聘代理中~',
+      title: '甘特尔啤酒厂家直销(招代理)，便宜又好喝~',
       path: 'pages/home/home'
     }
   }

@@ -29,45 +29,58 @@
     <view class='rightShare'>
       <button open-type="share" hover-class="none" class='opr'>一起使用~</button>></view>
   </view>
-  <view class='hr'></view>
   <view class='line'></view>
 
-  <!-- 待开发 -->
-  <button class="customerService" open-type="contact" hover-class="none">
-    <view class='item'>
-      <view class='icon'>
-        <image src='../../image/kefu.png'></image>
-      </view>
-      <view class='itemName'>
-        <view>我的客服</view>
-      </view>
-      <view class='right'>></view>
-    </view>
-  </button>
-
-  <!-- 意见反馈 -->
+  <!-- 生成海报 -->
   <view class='hr'></view>
-  <button class="customerService" open-type="feedback" hover-class="none">
-    <view class='item'>
-      <view class='icon'>
-        <image src='../../image/feedback.png'></image>
-      </view>
-      <view class='itemName'>
-        <view>意见反馈</view>
-      </view>
-      <view class='right'>></view>
-    </view>
-  </button>
-
-  <!-- 待开发 -->
-  <view class='hr'></view>
-  <view class='item'>
+  <view class='item' catchtap="toPort">
     <view class='icon'>
-      <image src='../../image/readyWork.png'></image>
+      <image src='../../image/posterIcon.png'></image>
     </view>
     <view class='itemName'>
-      <view>待开发</view>
+      <view>生成海报</view>
     </view>
     <view class='right'>></view>
   </view>
 </view>
+
+<!-- 意见反馈 -->
+<view class='hr'></view>
+<button class="customerService" open-type="feedback" hover-class="none">
+  <view class='item'>
+    <view class='icon'>
+      <image src='../../image/feedback.png'></image>
+    </view>
+    <view class='itemName'>
+      <view>意见反馈</view>
+    </view>
+    <view class='right'>></view>
+  </view>
+</button>
+
+<!-- 我的客服 -->
+<view class='hr'></view>
+<button class="customerService" open-type="contact" hover-class="none">
+  <view class='item'>
+    <view class='icon'>
+      <image src='../../image/kefu.png'></image>
+    </view>
+    <view class='itemName'>
+      <view>我的客服</view>
+    </view>
+    <view class='right'>></view>
+  </view>
+</button>
+
+<!-- 待开发 -->
+<!-- <view class='hr'></view>
+<view class='item'>
+  <view class='icon'>
+    <image src='../../image/readyWork.png'></image>
+  </view>
+  <view class='itemName'>
+    <view>待开发</view>
+  </view>
+  <view class='right'>></view>
+</view>
+</view> -->

@@ -7,7 +7,15 @@ Page({
   data: {
 
   },
-
+  // 跳转到海报
+  toPort() {
+    wx.navigateTo({
+      url: '../poster/poster',
+      success: function(res) {
+        console.log("跳转成功")
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
@@ -62,7 +70,7 @@ Page({
    */
   onShareAppMessage: function() {
     return {
-      title: '甘特尔啤酒厂家直销，火爆招聘代理中~',
+      title: '甘特尔啤酒厂家直销(招代理)，便宜又好喝~',
       path: 'pages/home/home'
     }
   }
